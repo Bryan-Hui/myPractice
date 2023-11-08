@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="c1" width="600" height="400" class="c11"></canvas>
+  </body>
+  <script>
+    const canvas = document.getElementById("c1");
+    const c11 = document.getElementsByName("c11")[0];
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(300, 200);
+    ctx.arcTo(300, 250, 250, 250, 50);
+    ctx.stroke();
+  </script>
+</html>

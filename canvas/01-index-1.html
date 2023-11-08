@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="c1" width="600" height="400" class="c11"></canvas>
+  </body>
+  <script>
+    const canvas = document.getElementById("c1");
+    const c11 = document.getElementsByName("c11")[0];
+    const ctx = canvas.getContext("2d");
+    // ctx.fillRect(100, 200, 100, 100);
+    // ctx.strokeRect(100, 100, 200, 100);
+    // ctx.fillRect(200, 150, 200, 100);
+    // ctx.clearRect(0, 0, c1.clientWidth, c1.clientHeight);
+    // console.log("c1 ", c1.getContext);
+    // console.log("c11 ", c11.getContext);
+
+    // let height = 0;
+
+    // let t1 = setInterval(() => {
+    //   height++;
+    //   ctx.clearRect(0, 0, c1.clientWidth, height);
+    //   if (height >= c1.clientHeight) {
+    //     clearInterval(t1);
+    //   }
+    // }, 10);
+
+    // ctx.rect(100, 100, 200, 100);
+    // ctx.fill();
+
+    // ctx.rect(100, 100, 200, 100);
+    // ctx.stroke();
+
+    //显示的都是填充的效果
+    // ctx.beginPath();
+    // ctx.rect(100, 100, 200, 100);
+    // ctx.stroke();
+    // ctx.closePath();
+
+    // ctx.beginPath();
+    // ctx.rect(200, 150, 200, 100);
+    // ctx.fill();
+    // ctx.closePath();
+
+    //绘制直线  lineTo()
+
+    ctx.arc(300, 200, 100, 0, Math.PI / 2, true); //绘制圆弧
+    ctx.fill();
+  </script>
+</html>
