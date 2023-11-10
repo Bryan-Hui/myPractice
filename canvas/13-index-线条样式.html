@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="c1" width="600" height="400" class="c11"></canvas>
+  </body>
+  <script>
+    const canvas = document.getElementById("c1");
+    const c11 = document.getElementsByName("c11")[0];
+    const ctx = canvas.getContext("2d");
+
+    ctx.moveTo(200, 100);
+    ctx.lineTo(300, 200);
+    // ctx.lineGap = "square";
+    ctx.lineTo(400, 100);
+
+    ctx.lineWidth = 40;
+    ctx.lineCap = "round"; //buff  round  square
+    ctx.lineJoin = "round";
+    ctx.stroke();
+  </script>
+</html>

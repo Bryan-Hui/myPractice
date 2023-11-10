@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="c1" width="600" height="400" class="c11"></canvas>
+  </body>
+  <script>
+    const canvas = document.getElementById("c1");
+    const c11 = document.getElementsByName("c11")[0];
+    const ctx = canvas.getContext("2d");
+
+    let index = 0;
+
+    function render() {
+      ctx.clearRect(0, 0, 600, 400);
+      index++;
+      if (index >= 40) {
+        index = 0;
+      }
+      ctx.moveTo(200, 100);
+      ctx.lineTo(300, 200);
+      // ctx.lineGap = "square";
+      ctx.lineTo(400, 100);
+
+      ctx.lineWidth = 1;
+      // ctx.lineCap = "round"; //buff  round  square
+      // ctx.lineJoin = "round";
+
+      ctx.setLineDash([10, 5]); //设置虚线
+      ctx.lineDashOffset = index;
+      ctx.stroke();
+
+      requestAnimationFrame(render);
+    }
+
+    requestAnimationFrame(render);
+  </script>
+</html>

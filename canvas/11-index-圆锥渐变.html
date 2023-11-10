@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="c1" width="600" height="400" class="c11"></canvas>
+  </body>
+  <script>
+    const canvas = document.getElementById("c1");
+    const c11 = document.getElementsByName("c11")[0];
+    const ctx = canvas.getContext("2d");
+
+    const lineGradient = ctx.createConicGradient(0, 300, 200);
+    lineGradient.addColorStop(0, "red");
+    lineGradient.addColorStop(0, "yellow");
+    lineGradient.addColorStop(1, "blue");
+    ctx.fillStyle = lineGradient;
+
+    // ctx.rect(600, 400);
+    // ctx.arc(300, 200, 100, 0, Math.PI * 2);
+    ctx.fillRect(0, 0, 600, 400);
+  </script>
+</html>
